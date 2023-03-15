@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*(optional?) si pasa de la ruta raíz entonces busca la ruta que se pone en el navegador en el routes js*/
+
+Route::get('/{optional?}', function () {
+    return view('app');
+})->name('basepath');
